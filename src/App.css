@@ -1,0 +1,952 @@
+
+*{
+  margin :0;
+  padding :0;
+  box-sizing: border-box;
+
+}
+body {
+  font-family: "Open Sans" , sans-serif;
+  background-color: rgb(210, 202, 202);
+}
+
+.navbar{
+  height: 54px;
+  display: flex;
+  gap: 55px;
+   background-color:white ;
+ z-index: 1000;
+ position: fixed; 
+ width: 100%;
+
+}
+.navbar__One{
+  display: flex;
+  background-color: aquamarine;
+  width: 27%;
+  /* align-items: center; */
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 30px;
+  /* margin-left: 10px; */
+}
+
+.navbar__one-Search{
+  background-color: palevioletred;
+  width:250px ;
+  /* height: 50px;
+  border-radius: 20px; */
+  height: 54px;
+  display: flex;
+  align-items: center;
+  
+}
+.navbar__one-Searchbar{
+  height: 43px;
+  width: 245px;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+  
+}
+
+.navbar__one-Fblogo{background-color: bisque;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  color: blue;
+  transition: background-color 0.3s ease;
+}
+.navbar__one-Fblogo:hover{
+  border-bottom: 3px;
+ 
+  cursor: pointer;
+}
+
+
+
+.navbar__Second{
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  width: 45%;
+  align-items: center;
+  font-size: 26px;
+}
+
+
+.navbar__Second-home{
+          background-color: yellowgreen;
+          height: 50px;
+          width:130px;
+           display: flex;
+           justify-content: center;
+           transition: background-color 0.3s ease;
+           align-items: center;
+           border-radius: 10px;
+}
+.navbar__Second-home:hover{
+  cursor: pointer;  
+  background-color: gray;
+
+}
+
+.navbar__Second-friends{
+  background-color: rgb(205, 117, 50);
+  height: 50px;
+  border-radius: 10px;
+  width:130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.navbar__Second-friends:hover{
+  cursor: pointer;  
+  background-color: gray;
+}
+.navbar__Second-video{
+  border-radius: 10px;
+  background-color: rgb(50, 89, 205);
+  height: 50px;
+  width:130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.navbar__Second-video:hover{
+  cursor: pointer;  
+  background-color: gray;
+}
+.navbar__Second-market{
+  background-color: rgb(205, 50, 202);
+  height: 50px;
+  border-radius: 10px;
+  width:130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.navbar__Second-market:hover{
+  cursor: pointer;  
+  background-color: gray;
+}
+.navbar__Second-groups{
+  background-color: rgb(50, 205, 192);
+  height: 50px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  width:130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .navbar__Second-groups:hover{
+    cursor: pointer; 
+    background-color: gray; 
+  }
+
+
+
+
+.navbar__last{
+  background-color: rgb(255, 190, 87);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+  font-size:27px ;
+  width: 22.8%;
+  padding-right: 15px;
+  margin-left: 30px;
+}
+
+.navbar__last-Menu{
+  background-color: rgb(213, 201, 201);
+height: 40px;
+width: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+transition: background-color 0.3s ease;
+}
+.navbar__last-Menu:hover{
+  cursor: pointer;
+  background-color: rgb(118, 110, 110);
+}
+.navbar__last-Messenger{
+  background-color: rgb(213, 201, 201);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.navbar__last-Messenger:hover{
+  cursor: pointer;
+  background-color: rgb(118, 110, 110);
+}
+.navbar__last-Notifications{
+  background-color: rgb(213, 201, 201);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.navbar__last-Notifications:hover{
+  cursor: pointer;
+  background-color: rgb(119, 113, 113);
+}
+.navbar__last-Accounts{
+  background-color: rgb(213, 201, 201);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.accounts-Logo{
+  border-radius: 50%;
+  height: 40px;
+  object-fit: cover;
+}
+.navbar__last-Accounts:hover{
+  cursor: pointer;
+}
+
+
+
+.whole-Sidebar{
+  background-color: blueviolet;
+  width: 24%;
+  height: 130%;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 5px; */
+  overflow: hidden;
+   /* position: relative;  */
+   margin-top: 50px;
+  position: fixed;
+  
+}
+
+/* Style the scrollbar */
+.whole-Sidebar::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+  background-color: #0b0a0a; /* Set the background color of the scrollbar */
+}
+
+.whole-Sidebar::-webkit-scrollbar-thumb {
+  background-color: black; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Optional: Add rounded corners to the thumb */
+}
+
+.whole-Sidebar::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0); /* Set the color of the scrollbar track */
+  transition: overflow 0.3s ease;
+}
+.whole-Sidebar:hover{
+  overflow-y: scroll;
+  
+}
+.links a{
+  color: rgb(44, 42, 42);
+  text-decoration: none;
+  font-size: 12px;
+}
+.links{
+  margin-left: 25px;
+}
+.links :hover{
+  text-decoration: underline;
+  
+}
+.side-image1-Name{
+  display: flex;
+  background-color: rgb(223, 136, 136);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-top: 10px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+.side-image1-Name:hover{
+  cursor: pointer;
+  background-color: rgb(133, 128, 128);
+}
+.tahaimg{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.friend-Logo{
+  width: 28px;
+  height: 28px;
+  color: rgba(0, 0, 255, 0.787)
+  
+}
+.memo-Logo{
+  width: 28px;
+  height: 28px;
+  color: rgba(0, 0, 255, 0.787)
+}
+.saving-Logo{
+  width: 28px;
+  height: 28px;
+  color: rgb(136, 7, 153);
+}
+.g-Logo{
+  width: 28px;
+  height: 28px;
+  color: rgba(0, 0, 255, 0.787)
+}
+.vid-Logo{
+  width: 28px;
+  height: 28px;
+  color:rgb(57, 112, 239)
+}
+.name{
+  /* padding-left: 10px; */
+  color: rgb(0, 0, 0); 
+  font-weight: bold;
+}
+.heading{
+  color: rgb(162, 162, 162); 
+  font-weight: bold;
+  background-color: rgb(100, 100, 100);
+  display: flex; 
+  align-items: center;
+  
+  padding-left: 17px;
+  height: 45px;
+  border-top: 1px solid rgb(171, 171, 171);
+  margin-left:10px;
+  border-radius: 5px;
+}
+
+/* img{
+  width: 5px;
+} */
+
+
+
+
+.side-logo-friends{
+  display: flex;
+  background-color: rgb(121, 37, 37);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;transition: background-color 0.3s ease;
+}
+.side-logo-friends:hover{
+cursor: pointer;
+background-color: rgb(169, 167, 167);
+}
+
+
+.side-logo-Memories{
+  background-color: rgb(223, 136, 136);
+  align-items: center;
+  padding-left: 19px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;transition: background-color 0.3s ease;
+}
+.side-logo-Memories:hover{
+    cursor: pointer;
+    background-color: rgb(169, 167, 167);
+}
+
+.side-logo-saved{
+  display: flex;
+  background-color: rgb(157, 116, 116);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;transition: background-color 0.3s ease;
+  gap: 10px;
+}
+.side-logo-saved:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.side-logo-friends{
+  display: flex;
+  background-color: rgb(237, 89, 89);transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-logo-friends:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.side-logo-Groups{
+  display: flex;transition: background-color 0.3s ease;
+  background-color: rgb(255, 5, 5);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-logo-Groups:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+
+.side-logo-Videos{
+  display: flex; background-color: rgb(218, 216, 216);
+  transition: background-color 0.3s ease;
+ 
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-logo-Videos:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.side-logo-setting{
+  display: flex;transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 18px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: aqua;
+}
+.side-logo-Privacy{
+  display: flex;transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 18px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: aqua;
+}
+.Tlogo{
+  width: 28px;
+  height: 28px;
+  color:rgb(86, 179, 210)
+}
+.settings-Logo{
+  width: 28px;
+  height: 28px;
+  color:rgb(86, 179, 210)
+}
+.info-Logo{
+  width: 28px;
+  height: 28px;
+  color:rgb(86, 179, 210)
+}
+.privacy-Logo{
+  width: 28px;
+  height: 28px;
+  color:rgb(86, 179, 210)
+}
+.side-info-Logo{
+  display: flex;transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 18px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: aqua;
+}
+.side-logo-Tool{
+  display: flex;transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 18px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: aqua;
+  
+}
+
+.side-logo-Seemore{
+  display: flex;transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 18px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: aqua;
+  
+}
+.side-logo-Seemore:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.see-Logo{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgb(176, 176, 176);
+}
+.side-Uet-Name{
+  display: flex;transition: background-color 0.3s ease;
+  background-color: rgb(158, 255, 113);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-Uet-Name:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.u_Image{
+width: 28px;
+height: 28px;
+border-radius: 20%;
+object-fit: cover;
+}
+.side-UetM-Name{
+  display: flex;transition: background-color 0.3s ease;
+  background-color: rgb(255, 243, 113);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-UetM-Name:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+
+.um-Image{
+    width: 28px;
+    height: 28px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.side-Ui-Name{
+  display: flex;transition: background-color 0.3s ease;
+  background-color: rgb(113, 153, 255);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-Ui-Name:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.ux-Image{
+  width: 28px;
+    height: 28px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+
+.side-batch5-Name{
+  display: flex;transition: background-color 0.3s ease;
+  background-color: rgb(255, 201, 113);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-batch5-Name:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.B5-Image{
+  width: 28px;
+  height: 28px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.side-8ballpool-Name{
+  display: flex;transition: background-color 0.3s ease;
+  background-color: rgb(25, 103, 102);
+  align-items: center;
+  padding-left: 17px;
+  height: 45px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.side-8ballpool-Name:hover{
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
+}
+.pool8-Image{
+  width: 28px;
+  height: 28px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.posts{
+ width: 45%;
+ height: 240px;
+ /* background-color: blue; */
+ position: absolute;
+ left: 28%;
+ bottom: 50%;
+}
+.stories-Block{
+  height: 240px;
+  /* background-color: rgb(3, 103, 88); */
+  display: flex;
+  gap: 7px;
+}
+.story-No{
+  height: 240px;
+  width: 28%;
+  background-color: rgb(221, 213, 229);
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+ 
+}
+.story-No:hover{
+  transform: scale(1.05); /* Adjust the scale factor based on your preference */
+}
+.story-body1{
+  height: 190px;
+  width: 100%;
+  background-color: black;
+  
+}
+.story-body{
+  transition: transform 0.2s ease-in-out;
+  height: 240px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: black;
+  position: relative;
+}
+.taha-Post{
+  height:190px;
+  width: 100%;
+  object-fit: cover; 
+  border-radius: 15px;
+  opacity: 0.7;
+}
+.create-Icon{
+  color:rgb(33, 33, 226);
+  font-size: 30px;
+  position: absolute;
+  left:10%;
+ bottom: 14%;
+transform: none;
+}
+
+.create-Story-heading{
+  padding-top: 20px;
+  padding-left: 22px;
+  font-weight: bold;
+}
+.taha-Post1{
+  height:240px;
+  width: 100%;
+  object-fit: cover; 
+  border-radius: 12px;
+ opacity: 0.7;
+
+}
+.create-Story-heading1{
+  position: absolute;
+  padding-left: 25px;
+  font-weight: bold;
+  bottom: 5%;
+  color: white;
+}
+.overstory1{
+  position: absolute;
+  top:5%;
+  margin-left: 2%;
+  background-color: blue;
+  height:38px;
+  width:38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  
+}
+.overstory-Pic{
+  height:32px;
+  width:32px;
+  border-radius: 50%;
+  margin-top: 3px;
+ 
+}
+.create-Div{
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  background-color: beige;
+  width: 83%;
+  margin-top: 20px;
+  margin-left: 50px;
+   border-radius:10px ;
+}
+.image-Input{
+  display: flex;
+  /* background-color: yellow; */
+  height:55%;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.input-Block{
+  width: 85%;
+  height:60%;
+  border-radius: 30px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.input-Block:hover{
+  background-color: lightgray;
+  cursor: pointer;
+}
+.image-Ofme{
+  height: 40px;
+  width:40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.image-Ofme:hover{
+  cursor: pointer;
+}
+.three-Icons{
+  display: flex;
+  background-color: orange;
+  height:50%;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+.icon1{
+  color: red;
+  height: 22px;
+}
+.icon2{
+  color: green;
+  height: 22px;
+}
+.icon3{
+  color: yellow;
+  height: 22px;
+}
+.icon-Heading{
+  display: flex;
+ gap: 10px;
+ margin-left: 5px;
+  height:75%;
+  width:30%;
+  align-items: center;
+  border-radius: 10px;
+  background-color: pink;
+  justify-content: center;
+}
+.icon-Heading:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}
+.show-Post{
+  background-color: indianred;
+height: 300%;
+/* background-color: beige; */
+width: 83%;
+margin-top: 20px;
+margin-left: 50px;
+ border-radius:10px ;}
+
+ .postprofile-Pic{
+  height: 40px;
+  width:40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 15px;
+}
+.Head-1{
+  padding-left: 10px;
+}
+.Time{
+  padding-left:10px ;
+}
+.portion-First{
+  height: 10%;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+/* .img-Heading-Icons{
+  display: flex;
+  align-items: center;
+ 
+  justify-content: space-between;
+} */
+.icons12{
+  background-color: red;
+  width:20%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 250px;
+  gap:25px;
+  font-size: 25px;
+}
+.meme-Image{
+  object-fit: cover;
+  width: 100%;
+}
+.portion-2nd-Image{
+  display: flex;
+  flex-direction: column;
+}
+.reaction-like-laugh{
+  font-size: 24px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  background-color: white;
+}
+.thumbs-Up{
+  cursor:pointer
+}
+.comment-Share{
+  padding-right: 15px;
+}
+.main-like-Share-Comment{
+  background-color: rgb(170, 70, 70);
+  display: flex;
+  height: 40px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+.like-Share-Comment{
+  background-color: antiquewhite;
+  height: 35px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.like-Share-Comment:hover{
+  background-color: lightgray;
+  cursor :pointer;
+}
+#hovering:hover{
+  cursor: pointer;
+
+}
+/* .whole-Sidebar2{
+  background-color: black;
+  height: 100%;
+ position: absolute;
+ right: 0;
+  
+} */
+.whole-Sidebar2{
+  background-color: blueviolet;
+  width: 24%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 5px; */
+  overflow: hidden;
+   /* position: relative;  */
+   position: absolute;
+ right: 0;
+ top:9%;
+ position: fixed;
+  
+  
+}
+/* Style the scrollbar */
+.whole-Sidebar2::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+.whole-Sidebar2::-webkit-scrollbar-thumb {
+  background-color: #0b0a0a; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Optional: Add rounded corners to the thumb */
+}
+
+.whole-Sidebar2::-webkit-scrollbar-track {
+  background-color:grey; /* Set the color of the scrollbar track */
+  transition: overflow 0.3s ease;
+}
+.whole-Sidebar2:hover{
+  overflow-y: scroll;
+  
+}
+.side-image2-Name{
+  display: flex;
+  background-color: rgb(223, 136, 136);
+  align-items: center;
+  padding-left: 17px;
+  /* height: 1000px; */
+  margin-top: 5px;
+  margin-left:10px;
+  border-radius: 5px;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+.side-image2-Name:hover{
+  cursor: pointer;
+  background-color: rgb(133, 128, 128);
+}
+.tahaimg2{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
