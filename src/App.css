@@ -1,26 +1,23 @@
-
-*{
-  margin :0;
-  padding :0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-
 }
 body {
-  font-family: "Open Sans" , sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: rgb(210, 202, 202);
 }
 
-.navbar{
+.navbar {
   height: 54px;
   display: flex;
   gap: 55px;
-   background-color:white ;
- z-index: 1000;
- position: fixed; 
- width: 100%;
-
+  background-color: white;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
 }
-.navbar__One{
+.navbar__One {
   display: flex;
   background-color: aquamarine;
   width: 27%;
@@ -31,26 +28,25 @@ body {
   /* margin-left: 10px; */
 }
 
-.navbar__one-Search{
+.navbar__one-Search {
   background-color: palevioletred;
-  width:250px ;
+  width: 250px;
   /* height: 50px;
   border-radius: 20px; */
   height: 54px;
   display: flex;
   align-items: center;
-  
 }
-.navbar__one-Searchbar{
+.navbar__one-Searchbar {
   height: 43px;
   width: 245px;
   border-radius: 50px;
   padding-left: 20px;
   font-size: 20px;
-  
 }
 
-.navbar__one-Fblogo{background-color: bisque;
+.navbar__one-Fblogo {
+  background-color: bisque;
   height: 54px;
   display: flex;
   align-items: center;
@@ -58,15 +54,13 @@ body {
   color: blue;
   transition: background-color 0.3s ease;
 }
-.navbar__one-Fblogo:hover{
+.navbar__one-Fblogo:hover {
   border-bottom: 3px;
- 
+
   cursor: pointer;
 }
 
-
-
-.navbar__Second{
+.navbar__Second {
   background-color: blueviolet;
   display: flex;
   justify-content: space-around;
@@ -76,110 +70,91 @@ body {
   font-size: 26px;
 }
 
-
-.navbar__Second-home{
-          background-color: yellowgreen;
-          height: 50px;
-          width:130px;
-           display: flex;
-           justify-content: center;
-           transition: background-color 0.3s ease;
-           align-items: center;
-           border-radius: 10px;
+.navbar__Second-home {
+  background-color: yellowgreen;
+  height: 50px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  border-radius: 10px;
 }
-.navbar__Second-home:hover{
-  cursor: pointer;  
+.navbar__Second-home:hover {
+  cursor: pointer;
   background-color: gray;
-
 }
 
-.navbar__Second-friends{
+.navbar__Second-friends {
   background-color: rgb(205, 117, 50);
   height: 50px;
   border-radius: 10px;
-  width:130px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
 }
-.navbar__Second-friends:hover{
-  cursor: pointer;  
+.navbar__Second-friends:hover {
+  cursor: pointer;
   background-color: gray;
 }
-.navbar__Second-video{
+.navbar__Second-video {
   border-radius: 10px;
   background-color: rgb(50, 89, 205);
   height: 50px;
-  width:130px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
 }
-.navbar__Second-video:hover{
-  cursor: pointer;  
+.navbar__Second-video:hover {
+  cursor: pointer;
   background-color: gray;
 }
-.navbar__Second-market{
+.navbar__Second-market {
   background-color: rgb(205, 50, 202);
   height: 50px;
   border-radius: 10px;
-  width:130px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
 }
-.navbar__Second-market:hover{
-  cursor: pointer;  
+.navbar__Second-market:hover {
+  cursor: pointer;
   background-color: gray;
 }
-.navbar__Second-groups{
+.navbar__Second-groups {
   background-color: rgb(50, 205, 192);
   height: 50px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
-  width:130px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
-  }
-  .navbar__Second-groups:hover{
-    cursor: pointer; 
-    background-color: gray; 
-  }
+}
+.navbar__Second-groups:hover {
+  cursor: pointer;
+  background-color: gray;
+}
 
-
-
-
-.navbar__last{
+.navbar__last {
   background-color: rgb(255, 190, 87);
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   align-items: center;
-  font-size:27px ;
+  font-size: 27px;
   width: 22.8%;
   padding-right: 15px;
   margin-left: 30px;
 }
 
-.navbar__last-Menu{
-  background-color: rgb(213, 201, 201);
-height: 40px;
-width: 40px;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 50%;
-transition: background-color 0.3s ease;
-}
-.navbar__last-Menu:hover{
-  cursor: pointer;
-  background-color: rgb(118, 110, 110);
-}
-.navbar__last-Messenger{
+.navbar__last-Menu {
   background-color: rgb(213, 201, 201);
   height: 40px;
   width: 40px;
@@ -189,11 +164,11 @@ transition: background-color 0.3s ease;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
-.navbar__last-Messenger:hover{
+.navbar__last-Menu:hover {
   cursor: pointer;
   background-color: rgb(118, 110, 110);
 }
-.navbar__last-Notifications{
+.navbar__last-Messenger {
   background-color: rgb(213, 201, 201);
   height: 40px;
   width: 40px;
@@ -203,11 +178,25 @@ transition: background-color 0.3s ease;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
-.navbar__last-Notifications:hover{
+.navbar__last-Messenger:hover {
+  cursor: pointer;
+  background-color: rgb(118, 110, 110);
+}
+.navbar__last-Notifications {
+  background-color: rgb(213, 201, 201);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.navbar__last-Notifications:hover {
   cursor: pointer;
   background-color: rgb(119, 113, 113);
 }
-.navbar__last-Accounts{
+.navbar__last-Accounts {
   background-color: rgb(213, 201, 201);
   height: 40px;
   width: 40px;
@@ -216,18 +205,16 @@ transition: background-color 0.3s ease;
   align-items: center;
   border-radius: 50%;
 }
-.accounts-Logo{
+.accounts-Logo {
   border-radius: 50%;
   height: 40px;
   object-fit: cover;
 }
-.navbar__last-Accounts:hover{
+.navbar__last-Accounts:hover {
   cursor: pointer;
 }
 
-
-
-.whole-Sidebar{
+.whole-Sidebar {
   background-color: blueviolet;
   width: 24%;
   height: 130%;
@@ -235,10 +222,9 @@ transition: background-color 0.3s ease;
   flex-direction: column;
   /* margin-top: 5px; */
   overflow: hidden;
-   /* position: relative;  */
-   margin-top: 50px;
+  /* position: relative;  */
+  margin-top: 50px;
   position: fixed;
-  
 }
 
 /* Style the scrollbar */
@@ -256,86 +242,83 @@ transition: background-color 0.3s ease;
   background-color: rgb(0, 0, 0); /* Set the color of the scrollbar track */
   transition: overflow 0.3s ease;
 }
-.whole-Sidebar:hover{
+.whole-Sidebar:hover {
   overflow-y: scroll;
-  
 }
-.links a{
+.links a {
   color: rgb(44, 42, 42);
   text-decoration: none;
   font-size: 12px;
 }
-.links{
+.links {
   margin-left: 25px;
 }
-.links :hover{
+.links :hover {
   text-decoration: underline;
-  
 }
-.side-image1-Name{
+.side-image1-Name {
   display: flex;
   background-color: rgb(223, 136, 136);
   align-items: center;
   padding-left: 17px;
   height: 45px;
   margin-top: 10px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   transition: background-color 0.3s ease;
 }
-.side-image1-Name:hover{
+.side-image1-Name:hover {
   cursor: pointer;
   background-color: rgb(133, 128, 128);
 }
-.tahaimg{
+.tahaimg {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   object-fit: cover;
 }
-.friend-Logo{
+.friend-Logo {
   width: 28px;
   height: 28px;
-  color: rgba(0, 0, 255, 0.787)
-  
+  color: rgba(0, 0, 255, 0.787);
 }
-.memo-Logo{
+.memo-Logo {
   width: 28px;
   height: 28px;
-  color: rgba(0, 0, 255, 0.787)
+  color: rgba(0, 0, 255, 0.787);
 }
-.saving-Logo{
+.saving-Logo {
   width: 28px;
   height: 28px;
   color: rgb(136, 7, 153);
 }
-.g-Logo{
+.g-Logo {
   width: 28px;
   height: 28px;
-  color: rgba(0, 0, 255, 0.787)
+  color: rgba(0, 0, 255, 0.787);
 }
-.vid-Logo{
+.vid-Logo {
   width: 28px;
   height: 28px;
-  color:rgb(57, 112, 239)
+  color: rgb(57, 112, 239);
 }
-.name{
+.name {
   /* padding-left: 10px; */
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
-.heading{
-  color: rgb(162, 162, 162); 
+.heading {
+  color: rgb(162, 162, 162);
   font-weight: bold;
   background-color: rgb(100, 100, 100);
-  display: flex; 
+  display: flex;
   align-items: center;
-  
+
   padding-left: 17px;
   height: 45px;
   border-top: 1px solid rgb(171, 171, 171);
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
 }
 
@@ -343,321 +326,328 @@ transition: background-color 0.3s ease;
   width: 5px;
 } */
 
-
-
-
-.side-logo-friends{
+.side-logo-friends {
   display: flex;
   background-color: rgb(121, 37, 37);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
-  gap: 10px;transition: background-color 0.3s ease;
+  gap: 10px;
+  transition: background-color 0.3s ease;
 }
-.side-logo-friends:hover{
-cursor: pointer;
-background-color: rgb(169, 167, 167);
+.side-logo-friends:hover {
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
 }
 
-
-.side-logo-Memories{
+.side-logo-Memories {
   background-color: rgb(223, 136, 136);
   align-items: center;
   padding-left: 19px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   display: flex;
-  gap: 10px;transition: background-color 0.3s ease;
+  gap: 10px;
+  transition: background-color 0.3s ease;
 }
-.side-logo-Memories:hover{
-    cursor: pointer;
-    background-color: rgb(169, 167, 167);
+.side-logo-Memories:hover {
+  cursor: pointer;
+  background-color: rgb(169, 167, 167);
 }
 
-.side-logo-saved{
+.side-logo-saved {
   display: flex;
   background-color: rgb(157, 116, 116);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
-  border-radius: 5px;transition: background-color 0.3s ease;
+  margin-left: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
   gap: 10px;
 }
-.side-logo-saved:hover{
+.side-logo-saved:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.side-logo-friends{
+.side-logo-friends {
   display: flex;
-  background-color: rgb(237, 89, 89);transition: background-color 0.3s ease;
+  background-color: rgb(237, 89, 89);
+  transition: background-color 0.3s ease;
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-logo-friends:hover{
+.side-logo-friends:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.side-logo-Groups{
-  display: flex;transition: background-color 0.3s ease;
+.side-logo-Groups {
+  display: flex;
+  transition: background-color 0.3s ease;
   background-color: rgb(255, 5, 5);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-logo-Groups:hover{
+.side-logo-Groups:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
 
-.side-logo-Videos{
-  display: flex; background-color: rgb(218, 216, 216);
+.side-logo-Videos {
+  display: flex;
+  background-color: rgb(218, 216, 216);
   transition: background-color 0.3s ease;
- 
+
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  
-  margin-left:10px;
+
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-logo-Videos:hover{
+.side-logo-Videos:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.side-logo-setting{
-  display: flex;transition: background-color 0.3s ease;
+.side-logo-setting {
+  display: flex;
+  transition: background-color 0.3s ease;
   align-items: center;
   padding-left: 18px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   background-color: aqua;
 }
-.side-logo-Privacy{
-  display: flex;transition: background-color 0.3s ease;
+.side-logo-Privacy {
+  display: flex;
+  transition: background-color 0.3s ease;
   align-items: center;
   padding-left: 18px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   background-color: aqua;
 }
-.Tlogo{
+.Tlogo {
   width: 28px;
   height: 28px;
-  color:rgb(86, 179, 210)
+  color: rgb(86, 179, 210);
 }
-.settings-Logo{
+.settings-Logo {
   width: 28px;
   height: 28px;
-  color:rgb(86, 179, 210)
+  color: rgb(86, 179, 210);
 }
-.info-Logo{
+.info-Logo {
   width: 28px;
   height: 28px;
-  color:rgb(86, 179, 210)
+  color: rgb(86, 179, 210);
 }
-.privacy-Logo{
+.privacy-Logo {
   width: 28px;
   height: 28px;
-  color:rgb(86, 179, 210)
+  color: rgb(86, 179, 210);
 }
-.side-info-Logo{
-  display: flex;transition: background-color 0.3s ease;
+.side-info-Logo {
+  display: flex;
+  transition: background-color 0.3s ease;
   align-items: center;
   padding-left: 18px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   background-color: aqua;
 }
-.side-logo-Tool{
-  display: flex;transition: background-color 0.3s ease;
+.side-logo-Tool {
+  display: flex;
+  transition: background-color 0.3s ease;
   align-items: center;
   padding-left: 18px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   background-color: aqua;
-  
 }
 
-.side-logo-Seemore{
-  display: flex;transition: background-color 0.3s ease;
+.side-logo-Seemore {
+  display: flex;
+  transition: background-color 0.3s ease;
   align-items: center;
   padding-left: 18px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   background-color: aqua;
-  
 }
-.side-logo-Seemore:hover{
+.side-logo-Seemore:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.see-Logo{
+.see-Logo {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   background-color: rgb(176, 176, 176);
 }
-.side-Uet-Name{
-  display: flex;transition: background-color 0.3s ease;
+.side-Uet-Name {
+  display: flex;
+  transition: background-color 0.3s ease;
   background-color: rgb(158, 255, 113);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-Uet-Name:hover{
+.side-Uet-Name:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.u_Image{
-width: 28px;
-height: 28px;
-border-radius: 20%;
-object-fit: cover;
+.u_Image {
+  width: 28px;
+  height: 28px;
+  border-radius: 20%;
+  object-fit: cover;
 }
-.side-UetM-Name{
-  display: flex;transition: background-color 0.3s ease;
+.side-UetM-Name {
+  display: flex;
+  transition: background-color 0.3s ease;
   background-color: rgb(255, 243, 113);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-UetM-Name:hover{
+.side-UetM-Name:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
 
-.um-Image{
-    width: 28px;
-    height: 28px;
-    border-radius: 20%;
-    object-fit: cover;
+.um-Image {
+  width: 28px;
+  height: 28px;
+  border-radius: 20%;
+  object-fit: cover;
 }
 
-.side-Ui-Name{
-  display: flex;transition: background-color 0.3s ease;
+.side-Ui-Name {
+  display: flex;
+  transition: background-color 0.3s ease;
   background-color: rgb(113, 153, 255);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-Ui-Name:hover{
+.side-Ui-Name:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.ux-Image{
+.ux-Image {
   width: 28px;
-    height: 28px;
-    border-radius: 20%;
-    object-fit: cover;
+  height: 28px;
+  border-radius: 20%;
+  object-fit: cover;
 }
 
-
-.side-batch5-Name{
-  display: flex;transition: background-color 0.3s ease;
+.side-batch5-Name {
+  display: flex;
+  transition: background-color 0.3s ease;
   background-color: rgb(255, 201, 113);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-batch5-Name:hover{
+.side-batch5-Name:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.B5-Image{
+.B5-Image {
   width: 28px;
   height: 28px;
   border-radius: 20%;
   object-fit: cover;
 }
 
-.side-8ballpool-Name{
-  display: flex;transition: background-color 0.3s ease;
+.side-8ballpool-Name {
+  display: flex;
+  transition: background-color 0.3s ease;
   background-color: rgb(25, 103, 102);
   align-items: center;
   padding-left: 17px;
   height: 45px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
 }
-.side-8ballpool-Name:hover{
+.side-8ballpool-Name:hover {
   cursor: pointer;
   background-color: rgb(169, 167, 167);
 }
-.pool8-Image{
+.pool8-Image {
   width: 28px;
   height: 28px;
   border-radius: 20%;
   object-fit: cover;
 }
 
-.posts{
- width: 45%;
- height: 240px;
- /* background-color: blue; */
- position: absolute;
- left: 28%;
- bottom: 50%;
+.posts {
+  width: 45%;
+  height: 240px;
+  /* background-color: blue; */
+  position: absolute;
+  left: 28%;
+  bottom: 50%;
 }
-.stories-Block{
+.stories-Block {
   height: 240px;
   /* background-color: rgb(3, 103, 88); */
   display: flex;
   gap: 7px;
 }
-.story-No{
+.story-No {
   height: 240px;
   width: 28%;
   background-color: rgb(221, 213, 229);
   justify-content: center;
   align-items: center;
   border-radius: 12px;
- 
 }
-.story-No:hover{
+.story-No:hover {
   transform: scale(1.05); /* Adjust the scale factor based on your preference */
 }
-.story-body1{
+.story-body1 {
   height: 190px;
   width: 100%;
   background-color: black;
-  
 }
-.story-body{
+.story-body {
   transition: transform 0.2s ease-in-out;
   height: 240px;
   width: 100%;
@@ -665,62 +655,59 @@ object-fit: cover;
   background-color: black;
   position: relative;
 }
-.taha-Post{
-  height:190px;
+.taha-Post {
+  height: 190px;
   width: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   border-radius: 15px;
   opacity: 0.7;
 }
-.create-Icon{
-  color:rgb(33, 33, 226);
+.create-Icon {
+  color: rgb(33, 33, 226);
   font-size: 30px;
   position: absolute;
-  left:10%;
- bottom: 14%;
-transform: none;
+  left: 10%;
+  bottom: 14%;
+  transform: none;
 }
 
-.create-Story-heading{
+.create-Story-heading {
   padding-top: 20px;
   padding-left: 22px;
   font-weight: bold;
 }
-.taha-Post1{
-  height:240px;
+.taha-Post1 {
+  height: 240px;
   width: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   border-radius: 12px;
- opacity: 0.7;
-
+  opacity: 0.7;
 }
-.create-Story-heading1{
+.create-Story-heading1 {
   position: absolute;
   padding-left: 25px;
   font-weight: bold;
   bottom: 5%;
   color: white;
 }
-.overstory1{
+.overstory1 {
   position: absolute;
-  top:5%;
+  top: 5%;
   margin-left: 2%;
   background-color: blue;
-  height:38px;
-  width:38px;
+  height: 38px;
+  width: 38px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  
 }
-.overstory-Pic{
-  height:32px;
-  width:32px;
+.overstory-Pic {
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   margin-top: 3px;
- 
 }
-.create-Div{
+.create-Div {
   display: flex;
   flex-direction: column;
   height: 120px;
@@ -728,94 +715,95 @@ transform: none;
   width: 83%;
   margin-top: 20px;
   margin-left: 50px;
-   border-radius:10px ;
+  border-radius: 10px;
 }
-.image-Input{
+.image-Input {
   display: flex;
   /* background-color: yellow; */
-  height:55%;
+  height: 55%;
   align-items: center;
   gap: 10px;
   justify-content: center;
 }
-.input-Block{
+.input-Block {
   width: 85%;
-  height:60%;
+  height: 60%;
   border-radius: 30px;
   padding-left: 20px;
   font-size: 18px;
 }
-.input-Block:hover{
+.input-Block:hover {
   background-color: lightgray;
   cursor: pointer;
 }
-.image-Ofme{
+.image-Ofme {
   height: 40px;
-  width:40px;
+  width: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
-.image-Ofme:hover{
+.image-Ofme:hover {
   cursor: pointer;
 }
-.three-Icons{
+.three-Icons {
   display: flex;
   background-color: orange;
-  height:50%;
+  height: 50%;
   align-items: center;
   gap: 5px;
   justify-content: center;
 }
-.icon1{
+.icon1 {
   color: red;
   height: 22px;
 }
-.icon2{
+.icon2 {
   color: green;
   height: 22px;
 }
-.icon3{
+.icon3 {
   color: yellow;
   height: 22px;
 }
-.icon-Heading{
+.icon-Heading {
   display: flex;
- gap: 10px;
- margin-left: 5px;
-  height:75%;
-  width:30%;
+  gap: 10px;
+  margin-left: 5px;
+  height: 75%;
+  width: 30%;
   align-items: center;
   border-radius: 10px;
   background-color: pink;
   justify-content: center;
 }
-.icon-Heading:hover{
+.icon-Heading:hover {
   cursor: pointer;
   background-color: lightgray;
 }
-.show-Post{
+.show-Post {
   background-color: indianred;
-height: 300%;
-/* background-color: beige; */
-width: 83%;
-margin-top: 20px;
-margin-left: 50px;
- border-radius:10px ;}
+  height: 300%;
+  /* background-color: beige; */
+  width: 83%;
+  margin-top: 20px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
 
- .postprofile-Pic{
+.postprofile-Pic {
   height: 40px;
-  width:40px;
+  width: 40px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 15px;
 }
-.Head-1{
+.Head-1 {
   padding-left: 10px;
 }
-.Time{
-  padding-left:10px ;
+.Time {
+  padding-left: 10px;
 }
-.portion-First{
+.portion-First {
   height: 10%;
   background-color: green;
   display: flex;
@@ -828,26 +816,26 @@ margin-left: 50px;
  
   justify-content: space-between;
 } */
-.icons12{
+.icons12 {
   background-color: red;
-  width:20%;
+  width: 20%;
   height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 250px;
-  gap:25px;
+  gap: 25px;
   font-size: 25px;
 }
-.meme-Image{
+.meme-Image {
   object-fit: cover;
   width: 100%;
 }
-.portion-2nd-Image{
+.portion-2nd-Image {
   display: flex;
   flex-direction: column;
 }
-.reaction-like-laugh{
+.reaction-like-laugh {
   font-size: 24px;
   height: 30px;
   display: flex;
@@ -856,13 +844,13 @@ margin-left: 50px;
   padding-left: 15px;
   background-color: white;
 }
-.thumbs-Up{
-  cursor:pointer
+.thumbs-Up {
+  cursor: pointer;
 }
-.comment-Share{
+.comment-Share {
   padding-right: 15px;
 }
-.main-like-Share-Comment{
+.main-like-Share-Comment {
   background-color: rgb(170, 70, 70);
   display: flex;
   height: 40px;
@@ -870,7 +858,7 @@ margin-left: 50px;
   align-items: center;
   justify-content: space-around;
 }
-.like-Share-Comment{
+.like-Share-Comment {
   background-color: antiquewhite;
   height: 35px;
   width: 30%;
@@ -879,13 +867,12 @@ margin-left: 50px;
   align-items: center;
   border-radius: 8px;
 }
-.like-Share-Comment:hover{
+.like-Share-Comment:hover {
   background-color: lightgray;
-  cursor :pointer;
-}
-#hovering:hover{
   cursor: pointer;
-
+}
+#hovering:hover {
+  cursor: pointer;
 }
 /* .whole-Sidebar2{
   background-color: black;
@@ -894,7 +881,7 @@ margin-left: 50px;
  right: 0;
   
 } */
-.whole-Sidebar2{
+.whole-Sidebar2 {
   background-color: blueviolet;
   width: 24%;
   height: 100%;
@@ -902,13 +889,11 @@ margin-left: 50px;
   flex-direction: column;
   /* margin-top: 5px; */
   overflow: hidden;
-   /* position: relative;  */
-   position: absolute;
- right: 0;
- top:9%;
- position: fixed;
-  
-  
+  /* position: relative;  */
+  position: absolute;
+  right: 0;
+  top: 9%;
+  position: fixed;
 }
 /* Style the scrollbar */
 .whole-Sidebar2::-webkit-scrollbar {
@@ -921,32 +906,260 @@ margin-left: 50px;
 }
 
 .whole-Sidebar2::-webkit-scrollbar-track {
-  background-color:grey; /* Set the color of the scrollbar track */
+  background-color: grey; /* Set the color of the scrollbar track */
   transition: overflow 0.3s ease;
 }
-.whole-Sidebar2:hover{
+.whole-Sidebar2:hover {
   overflow-y: scroll;
-  
 }
-.side-image2-Name{
+.side-image2-Name {
   display: flex;
   background-color: rgb(223, 136, 136);
   align-items: center;
   padding-left: 17px;
   /* height: 1000px; */
   margin-top: 5px;
-  margin-left:10px;
+  margin-left: 10px;
   border-radius: 5px;
   gap: 10px;
   transition: background-color 0.3s ease;
 }
-.side-image2-Name:hover{
+.side-image2-Name:hover {
   cursor: pointer;
   background-color: rgb(133, 128, 128);
 }
-.tahaimg2{
+.tahaimg2 {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   object-fit: cover;
 }
+
+.login-Page-overall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: rgb(184, 184, 184);
+  width: 100%;
+  height: 100vh;
+}
+.login-Block {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 30%;
+  height: 60%;
+  border-radius: 10px;
+}
+.login-Sideimage {
+  width: 30%;
+  height: 54%;
+}
+.already-para {
+  font-size: 17px;
+}
+
+.first-Block,
+.second-Block,
+.third-Block,
+.fourth-Block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 18px;
+  margin-top: 25px;
+  width: 92%;
+  border-radius: 6px;
+  height: 48px;
+}
+.text-Block:focus,
+.password-Block:focus {
+  border: 1px solid blue;
+  outline: none; /* Optional: Remove default focus outline */
+}
+
+.text-Block,
+.button-Block,
+.password-Block {
+  width: 99%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(217, 217, 228);
+  font-size: 20px;
+
+  padding-left: 20px;
+}
+.password-Block {
+  background-color: azure;
+  width: 99%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(217, 217, 228);
+  font-size: 20px;
+  padding-left: 20px;
+}
+.forgot-Pass {
+  margin-left: 26%;
+  width: 40%;
+  margin-top: 25px;
+  /* background-color: aquamarine; */
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+.fourth-Block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 174, 20);
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+  margin-left: 98px;
+  margin-top: 25px;
+  width: 50%;
+  border-radius: 6px;
+  height: 48px;
+}
+.third-Block {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+}
+h2 {
+  color: rgb(89, 89, 232);
+  font-size: 30px;
+}
+h4 {
+  font-size: 20px;
+}
+.third-Block,
+.fourth-Block:hover {
+  cursor: pointer;
+}
+.line-Seg {
+  width: 90%;
+  height: 2px;
+  color: rgb(3, 3, 3);
+  margin-left: 20px;
+}
+.SignUp-Block {
+  background-color: beige;
+  width: 30%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 13%;
+  left: 35%;
+  border-radius: 15px;
+}
+.underlin {
+  width: 100%;
+  height: 2px;
+  color: rgb(3, 3, 3);
+}
+.date-Of-Birth,
+.gender-Para {
+  width: 93%;
+  color: rgb(81, 78, 78);
+  font-size: small;
+}
+.heading-SignUp {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.paragraph {
+  font-size: 19px;
+}
+.names-Block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 99%;
+  /* background-color: aqua; */
+  padding-left: 15px;
+}
+.input-names {
+  height: 40px;
+  width: 93%;
+  font-size: 100%;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.email-AddressBlock,
+.new-PasswordBlock {
+  height: 50px;
+  width: 99%;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputEmail-Password {
+  height: 40px;
+  width: 93%;
+  font-size: 100%;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.dates-Block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color:purple ; */
+  height: 50px;
+  width: 99%;
+}
+.time-Block {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 99%;
+  height: 43px;
+}
+.input-time-Block {
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 100%;
+  padding-left: 10px;
+}
+.gender-Block {
+  display: flex;
+  /* background-color:purple ; */
+  justify-content: space-evenly;
+  height: 40px;
+  width: 107%;
+}
+.gen-Block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: rgb(75, 108, 108); */
+  border: 1px solid black;
+  width: 110px;
+  border-radius: 5px;
+}
+.SignUp-Button {
+  margin-top: 15px;
+  width: 50%;
+  height: 45px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: rgb(6, 166, 6);
+  border-radius: 8px;
+}
+
+/* .gender-Input{
+  
+/* height: 20px; */
