@@ -1,44 +1,46 @@
 import React from "react";
-// import FacebookLogin from './components/images/FacebookLogin'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../Firebase";
 import Img1 from "./images/fbimage.png";
 const Loginpage = () => {
   const [state, setState] = React.useState({
     textBlock: "",
     passwordBlock: "",
   });
+  const [submitButtonDisabled, setSubmitButtonDisabled] = React.useState(false);
+  const navigate = useNavigate("");
   let name, value;
   const handlinginput = (event) => {
     name = event.target.name;
+
     value = event.target.value;
 
     setState({ ...state, [name]: value });
   };
+  const [errorMsg, setErrorMsg] = React.useState("");
 
-  const submit = async (event) => {
+  const submit = (event) => {
     event.preventDefault();
 
-    const res = await fetch(
-      "https://react-fb-form-ebf41-default-rtdb.firebaseio.com/react-fb-form.json", // Replace with your Firebase database URL
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          textBlock: state.textBlock, // Assuming textBlock is a variable containing your data
-          passwordBlock: state.passwordBlock, // Assuming passwordBlock is a variable containing your data
-        }),
-      }
-    );
-    if (res) {
-      alert("your data has been stored");
-      console.log(res);
-      setState({
-        textBlock: "",
-        passwordBlock: "",
-      });
+    if (!state.textBlock || !state.passwordBlock) {
+      setErrorMsg("PLz fill the blocks");
+      return;
     }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    signInWithEmailAndPassword(auth, state.textBlock, state.passwordBlock)
+      .then(async (res) => {
+        setSubmitButtonDisabled(false);
+        navigate("/facebook");
+      })
+
+      .catch((err) => {
+        setSubmitButtonDisabled(false);
+        setErrorMsg(err.message);
+      });
+    setState({ textBlock: "", passwordBlock: "" });
   };
 
   return (
@@ -71,8 +73,12 @@ const Loginpage = () => {
             onChange={handlinginput}
           />
         </div>
-
-        <div className="third-Block" onClick={submit}>
+        <pre> {errorMsg} </pre>
+        <div
+          className="third-Block"
+          onClick={submit}
+          disabled={submitButtonDisabled}
+        >
           <b> Log in </b>
         </div>
 

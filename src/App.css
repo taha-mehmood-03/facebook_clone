@@ -1159,7 +1159,9 @@ h4 {
   background-color: rgb(6, 166, 6);
   border-radius: 8px;
 }
-
+.SignUp-Button:disabled {
+  background-color: blueviolet;
+}
 /* .gender-Input{
   
 /* height: 20px; */

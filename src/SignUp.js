@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "./Firebase";
+
 const SignUp = () => {
   const [state, setState] = React.useState({
     firstname: "",
@@ -10,9 +13,9 @@ const SignUp = () => {
     date: "",
     year: "",
   });
-
+  const navigate = useNavigate("");
   const [gender, setGender] = React.useState("");
-
+  const [submitButtonDisabled, setSubmitButtonDisabled] = React.useState(false);
   const handleGenderChange = (event) => {
     setGender(event.target.value);
   };
@@ -25,36 +28,37 @@ const SignUp = () => {
     setState({ ...state, [name]: value });
   };
 
-  const submitData = async (event) => {
-    event.preventDefault();
+  const [errorMsg, setErrorMsg] = React.useState("");
 
-    const recieved = await fetch(
-      " https://react-fb-form-ebf41-default-rtdb.firebaseio.com/react-fb-form.json",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...state,
-          gender: gender,
-        }),
-      }
-    );
-    if (recieved) {
-      alert("the data has been stored ");
-
-      setState({
-        firstname: "",
-        surname: "",
-        emailAdrress: "",
-        password: "",
-        month: "",
-        date: "",
-        year: "",
-      });
-      setGender("");
+  const submitData = () => {
+    if (
+      !state.emailAdrress ||
+      !state.firstname ||
+      !state.surname ||
+      !state.password
+    ) {
+      setErrorMsg("PLz fill the blocks");
+      return;
     }
+    setErrorMsg("");
+
+    setSubmitButtonDisabled(true);
+    createUserWithEmailAndPassword(
+      auth,
+      state.emailAdrress,
+      state.password
+    ).then(async (res) => {
+      setSubmitButtonDisabled(false);
+      const user = res.user;
+      await updateProfile(user, {
+        displayName: state.name,
+      });
+    });
+
+    navigate("/facebook").catch((err) => {
+      setSubmitButtonDisabled(false);
+      setErrorMsg(err.message);
+    });
   };
 
   return (
@@ -259,8 +263,12 @@ const SignUp = () => {
       </div>
 
       {/* <div className="SignUp-Button"> */}
-
-      <button className="SignUp-Button" onClick={submitData}>
+      <b>{errorMsg}</b>
+      <button
+        className="SignUp-Button"
+        onClick={submitData}
+        disabled={submitButtonDisabled}
+      >
         {" "}
         Sign Up
       </button>
