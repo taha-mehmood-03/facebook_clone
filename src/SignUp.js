@@ -76,7 +76,6 @@ const SignUp = () => {
             placeholder="First name"
             className="input-names"
             onChange={changingInput}
-            required
           />
         </div>
 
@@ -88,7 +87,6 @@ const SignUp = () => {
             placeholder="Surname"
             className="input-names"
             onChange={changingInput}
-            required
           />
         </div>
       </div>
@@ -101,7 +99,6 @@ const SignUp = () => {
           placeholder="Mobile number or email address"
           className="inputEmail-Password"
           onChange={changingInput}
-          required
         />
       </div>
 
@@ -113,7 +110,6 @@ const SignUp = () => {
           placeholder="New Password"
           className="inputEmail-Password"
           onChange={changingInput}
-          required
         />
       </div>
 
@@ -188,7 +184,6 @@ const SignUp = () => {
             value={state.year}
             className="input-time-Block"
             onChange={changingInput}
-            required
           >
             <option value="2000">2000</option>
             <option value="2001">2001</option>
@@ -231,7 +226,6 @@ const SignUp = () => {
             className="gender-Input"
             checked={gender === "female"}
             onChange={handleGenderChange}
-            required
           />
         </div>
 
@@ -244,7 +238,6 @@ const SignUp = () => {
             className="gender-Input"
             checked={gender === "male"}
             onChange={handleGenderChange}
-            required
           />
         </div>
 
@@ -257,7 +250,6 @@ const SignUp = () => {
             className="gender-Input"
             checked={gender === "custom"}
             onChange={handleGenderChange}
-            required
           />
         </div>
       </div>

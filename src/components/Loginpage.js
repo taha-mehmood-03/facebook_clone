@@ -34,13 +34,15 @@ const Loginpage = () => {
       .then(async (res) => {
         setSubmitButtonDisabled(false);
         navigate("/facebook");
+        setState({ textBlock: "", passwordBlock: "" });
       })
 
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
+        setState({ textBlock: "", passwordBlock: "" });
       });
-    setState({ textBlock: "", passwordBlock: "" });
+   
   };
 
   return (
@@ -62,7 +64,6 @@ const Loginpage = () => {
             onChange={handlinginput}
           />
         </div>
-
         <div className="second-Block">
           <input
             type="password"
@@ -81,21 +82,17 @@ const Loginpage = () => {
         >
           <b> Log in </b>
         </div>
-
         <a href="#" className="forgot-Pass">
           {" "}
           Forgotten password?
         </a>
-
         <br />
-        <hr className="line-Seg" />
-
-        <Link to="/signup">
-          {" "}
-          <div className="fourth-Block">
+        <hr className="line-Seg" />{" "}
+        <div className="fourth-Block">
+          <Link to="/signup" className="link">
             <b> Create new account</b>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );
