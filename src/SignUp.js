@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "./Firebase";
-
+import { auth } from "./components/Firebase";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { useDispatch } from "react-redux";
+import { updateName } from "./components/actions/nameChangerAction"; // Adjust the path accordingly
 const SignUp = () => {
+  const dispatch = useDispatch();
   const [state, setState] = React.useState({
     firstname: "",
     surname: "",
@@ -30,6 +33,8 @@ const SignUp = () => {
 
   const [errorMsg, setErrorMsg] = React.useState("");
 
+  const db = getFirestore();
+
   const submitData = () => {
     if (
       !state.emailAdrress ||
@@ -37,11 +42,11 @@ const SignUp = () => {
       !state.surname ||
       !state.password
     ) {
-      setErrorMsg("PLz fill the blocks");
+      setErrorMsg("Please fill all the fields");
       return;
     }
     setErrorMsg("");
-
+  
     setSubmitButtonDisabled(true);
     createUserWithEmailAndPassword(
       auth,
@@ -50,17 +55,27 @@ const SignUp = () => {
     ).then(async (res) => {
       setSubmitButtonDisabled(false);
       const user = res.user;
+  
+      // Update profile with first and last name
       await updateProfile(user, {
-        displayName: state.name,
+        name: `${state.firstname} ${state.surname}`,
       });
-    });
 
-    navigate("/facebook").catch((err) => {
+      // Store additional user data in Firestore
+      await setDoc(doc(db, "users", user.uid), {
+        name: `${state.firstname} ${state.surname}`,
+       email: `${state.emailAdrress}`,
+      });
+
+      dispatch(updateName(`${state.firstname} ${state.surname}`));
+      navigate("/");
+      // You may need to update the route as per your application logic
+    }).catch((err) => {
       setSubmitButtonDisabled(false);
       setErrorMsg(err.message);
     });
   };
-
+ 
   return (
     <div className="SignUp-Block" method="POST">
       <div className="heading-SignUp">Create a new account</div>

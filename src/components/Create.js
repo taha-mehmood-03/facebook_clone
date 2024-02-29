@@ -6,23 +6,29 @@ import {
   faPhotoFilm,
   faFaceGrinWide,
 } from "@fortawesome/free-solid-svg-icons";
-
+import Img7 from "./images/asif image.PNG"
+import { useSelector, useDispatch } from "react-redux";
+import { fetchImageUrl } from "./actions/actions";
+import { auth } from "./Firebase";
 const Create = ({ createDiv }) => {
+  const imageUrl = useSelector((state) => state.image.imageUrl);
+  const name = useSelector(state => state.nameChanger.name);
   return (
     <div className="create-Div">
       <div className="image-Input">
         <div className="image">
-          <img src={Img1} alt="pic" className="image-Ofme" />
+      <img src={imageUrl} alt="pic" className="image-Ofme" />
         </div>
         <input
           type="text"
           readOnly
           className="input-Block"
-          placeholder="What's on your mind, Taha ?"
+          placeholder={`What's on your mind, ${name}?`}
           onClick={createDiv}
         />
       </div>
-
+     
+ <hr className="line-Seg"/>
       <div className="three-Icons">
         <div className="icon-Heading">
           <FontAwesomeIcon icon={faVideo} className="icon1" /> Live video{" "}

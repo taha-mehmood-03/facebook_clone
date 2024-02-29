@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../Firebase";
+import { auth } from "./Firebase";
 import Img1 from "./images/fbimage.png";
 const Loginpage = () => {
   const [state, setState] = React.useState({
